@@ -1,0 +1,428 @@
+header{
+    background-color: $color_bg;
+    @media (max-width: 730px){
+       height: 300px;
+    }
+    .container{
+        @include flex(row,space-between,center);
+        padding: 40px 0 ;
+
+        @media (max-width: 730px){
+            @include flex(column,center,center);
+            padding: 20px 0 ;
+        }
+
+        .logo{
+            .med{
+                font-family: Roboto;
+                font-size: 40px;
+                font-weight:900;
+                line-height: 47px;
+                color: $color_2;
+                span{
+                  color: $color_1;
+                }
+            }
+        }
+        nav ul{
+          @include flex(row,space-between,center);
+          flex-wrap: wrap;
+
+          @media (max-width: 730px){
+            @include flex(column,center,center);
+           }
+
+          li{
+            a{
+                @media (max-width: 930px){
+                    margin-right: 20px;
+                }
+              color: $color_a;
+              font-family: Roboto;
+              font-size: 18px;
+              font-weight: 100;
+              line-height: 34px;
+              margin-right: 27px;
+              transition: color .3s ease;
+              &:hover{
+                color: rgba(0, 0, 255, 0.56);
+              }
+            }
+          }
+        }
+
+    }
+}
+
+.hero{
+    background-color: $color_bg;
+    height: 600px;
+
+    @media (max-width: 930px){
+        height: 470px;
+    }
+
+    .container{
+        @include flex(row,space-between,flex-start);
+        padding: 50px 0;
+        position: relative;
+
+        @media (max-width: 730px){
+            @include flex(column,center,center);
+            padding: 30px 0;
+        }
+
+        .wealth{
+            @include flex(column,space-between,flex-start);
+
+            @media (max-width: 730px){
+                @include flex(column,center,center);
+            }
+
+            .h1-normal{
+
+                @media (max-width: 730px){
+                    width: 400px;
+                    margin-bottom: 27px;
+                    font-weight: 700;
+                    font-size: 35px;
+                    text-align: center;
+                }
+
+                @media (max-width: 470px){
+                    width: 300px;
+                    margin-bottom: 20px;
+                    font-weight: 700;
+                    font-size: 30px;
+                    text-align: center;
+                }
+
+                width: 528px;
+                margin-bottom: 33px;
+                font-weight: 900;
+            }
+            .hero-title{
+
+                @media (max-width: 730px){
+                    font-size: 19px;
+                    width: 480px;
+                    text-align: center;
+                }
+
+                @media (max-width: 470px){
+                    margin-bottom: 20px;
+                    font-weight: 200;
+                    font-size: 19px;
+                    text-align: center;
+                    width: 350px;
+                }
+
+                font-family: Roboto;
+                font-size: 21px;
+                line-height: 25px;
+                font-weight: 200;
+                color: $color_1;
+                width: 480px;
+                margin-bottom:45px;
+            }
+        }
+        .buttons{
+            @media (max-width: 470px){
+                @include flex(column,center,center);
+                gap: 15px;
+            }
+            z-index: 1;
+            .btn{
+                font-family: Roboto;
+                font-weight: 400;
+                font-size: 21px;
+                line-height: 25px;
+                color: black;
+                padding: 13px 30px;
+                background-color: $color_2;
+                margin-right: 17px;
+                cursor: pointer;
+                transition: color .3s ease;
+              &:hover{
+                color: $color_bg;
+                background-color: $color_1;
+              }
+            }
+            .btn1{
+
+                @media (max-width: 930px){
+                    background-color: $color_bg;
+                    border: 1px solid white;
+                }
+
+                font-family: Roboto;
+                font-weight: 400;
+                font-size: 21px;
+                line-height: 25px;
+                color: black;
+                padding: 13px 30px;
+                background-color: $color_1;
+                cursor: pointer;
+                transition: color .3s ease;
+              &:hover{
+                color: rgba(11, 73, 216, 0.568);
+                background-color: $color_2;
+              }
+            }
+        }
+
+        .registr{
+            position: relative;
+            z-index: 2;
+
+            @media (max-width: 930px){
+                display: none;
+            }
+
+            .absoluteImg{
+                position:absolute;
+                top: 24px;
+                right: 20px;
+            }
+            .rasm{
+                position:absolute;
+                @include flex(column,space-between,center);
+                gap: 30px;
+                top: 100px;
+                right: 24px;
+                h2{
+                    font-family: Roboto;
+                    font-size: 43px;
+                    font-weight: 900;
+                    line-height: 50px;
+                    text-align: center;
+                    letter-spacing: 8px;
+                    width: 163px;
+                    color: $color_1;
+                    text-transform: uppercase;
+                }
+                .reg{
+                    font-size: 12px;
+                    font-weight: 500;
+                    color:$color_1;
+                    text-align: center;
+                    letter-spacing: 2px;
+                    line-height: 14px;
+                    font-family: Roboto;
+                    padding: 15px 26px;
+                    background-color: $color_bg;
+                    border-radius: 33px;
+                    cursor: pointer;
+                    transition: color .3s ease;
+                &:hover{
+                 color:$color_bg;
+                 background-color: $color_1;
+                 }
+                    
+
+                }
+            }
+            
+        }
+
+        &::before {
+
+            @media (max-width: 930px){
+                display: none;
+            }
+
+            @media (max-width: 730px){
+                display: none;
+            }
+
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left:-316px;
+            width: 0;
+            height: 0;
+            border-right: 1631px solid #F8FBFF; 
+            border-top: 300px solid transparent; 
+            z-index: 1;
+          }
+    }
+}
+
+.body2{
+    background-color:#F8FBFF;
+    padding-top: 90px;
+
+    @media (max-width: 930px){
+        padding-top: 40px; 
+     }
+
+     @media (max-width: 730px){
+        padding-top: 20px; 
+     }
+
+    .container{
+        height: 400px;
+        @include flex(row,space-between,center);
+        flex-wrap: wrap;
+        gap: 20px;
+
+        @media (max-width: 1100px){
+            height: 700px;
+        }
+
+        @media (max-width: 930px){
+           gap:20px;
+
+        }
+
+        @media (max-width: 730px){
+            gap:20px;
+            @include flex(row,center,center);
+            height: 1280px;
+            padding-top: 20px;
+         }
+        
+        .block{
+            @include flex(column,flex-start,center);
+
+            @media (max-width: 730px){
+                @include flex(column,center,center);
+             }
+
+            padding-top: 30px;
+            width: 233px;
+            height: 250px;
+            background-color: $color_1;
+            box-shadow: 0 1px 10px rgba(233, 222, 222, 0.5), 
+            0 -1px 10px rgba(228, 222, 222, 0.5), 
+            5px 0 15px rgba(156, 151, 151, 0.5),
+            -5px 0 15px rgba(156, 151, 151, 0.5); 
+            .images{
+                position: relative;
+                .im1{
+                    position: absolute;
+                    top: 10px;
+                    left: 14px;
+                }
+                margin-bottom: 15px;
+            }
+            .hour{
+             font-family: Roboto;
+             font-size: 16px;
+             font-weight: 700;
+             line-height: 19px;
+             color: black;
+             margin-bottom: 15px;
+            }
+            .title{
+                font-family: Roboto;
+                font-size: 10px;
+                line-height: 12px;
+                text-align: center;
+                color: #676464;
+                width: 189px;
+            }
+        }
+        .active{
+            background-color: $color_2;
+        }
+        
+        .bl1{.images{
+            position: relative;
+            .im1{
+                position: absolute;
+                top: 18px;
+                left: 20px;
+            }
+        }}
+
+        .bl4{.images{
+            position: relative;
+            .im1{
+                position: absolute;
+                top: 15px;
+                left: 18px;
+            }
+        }}
+    }
+}
+
+.body3{
+    background-color:#F8FBFF;
+    height: 600px;
+
+    @media (max-width: 930px){
+        height: 400px;
+     }
+
+     @media (max-width: 730px){
+        height: 350px;
+     }
+
+    .container{
+        @include flex(row,space-between,center);
+        gap: 150px;
+
+        @media (max-width: 1100px){
+            @include flex(row,center,center);
+            gap: 0;
+        }
+
+        .medicare{
+            @include flex(column,space-between,flex-start);
+            gap: 40px;
+
+            @media (max-width: 1100px){
+                @include flex(column,center,center);
+            }
+
+            .title{
+                font-family: Roboto;
+                font-size: 35px;
+                font-weight: 600;
+                color: black;
+                line-height: 41px;
+                width: 344px;
+
+                @media (max-width: 1100px){
+                   text-align: center;
+                }
+
+            }
+            .text{
+                color: #757373;
+                font-family: Roboto;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 18px;
+                width: 361px;
+
+                @media (max-width: 1100px){
+                    text-align: center;
+                 }
+
+            }
+            .btn2{
+                color: white;
+                background-color: $color_bg;
+                padding: 13px 30px;
+                cursor: pointer;
+                transition: color .3s ease;
+                &:hover{
+                    color: $color_bg;
+                    background-color: $color_1;
+                    border: 1px solid $color_bg;
+                }
+            }
+        }
+        .images2{
+            img{
+
+                @media (max-width: 1100px){
+                 display: none;
+                }
+
+            }
+        }
+    }
+}
